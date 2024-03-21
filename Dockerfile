@@ -7,14 +7,14 @@ WORKDIR /app
 # Copy package.json and package-lock.json
 COPY package*.json ./
 
-#Install Angular CLI
-RUN npm install -g @angular/cli
-
 # Install dependencies
 #RUN npm install --force
 
 # Copy the rest of the application code
 COPY . /app
+
+#Install Angular CLI
+RUN npm install -g @angular/cli
 
 #Run and build the application
 RUN npm run build
