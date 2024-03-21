@@ -14,10 +14,10 @@ COPY package*.json ./
 COPY . /app
 
 #Install Angular CLI
-#RUN npm install -g @angular/cli
+RUN npm install -g @angular/cli
 
 #Run and build the application
-#RUN npm run build
+RUN npm run build
 
 # Expose the port Angular.js is running on
 EXPOSE 4200
